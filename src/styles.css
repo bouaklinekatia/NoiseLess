@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.625rem;
+
+    --background: oklch(0.16 0.02 250);
+    --foreground: oklch(0.96 0.005 250);
+    --card: oklch(0.20 0.025 250);
+    --card-foreground: oklch(0.96 0.005 250);
+    --popover: oklch(0.20 0.025 250);
+    --popover-foreground: oklch(0.96 0.005 250);
+    --primary: oklch(0.72 0.18 215);
+    --primary-foreground: oklch(0.15 0.02 250);
+    --secondary: oklch(0.26 0.03 250);
+    --secondary-foreground: oklch(0.96 0.005 250);
+    --muted: oklch(0.24 0.025 250);
+    --muted-foreground: oklch(0.68 0.02 250);
+    --accent: oklch(0.30 0.05 215);
+    --accent-foreground: oklch(0.96 0.005 250);
+    --destructive: oklch(0.62 0.22 27);
+    --border: oklch(0.30 0.02 250);
+    --input: oklch(0.26 0.025 250);
+    --ring: oklch(0.72 0.18 215);
+
+    --method-1: oklch(0.68 0.17 240);
+    --method-1-soft: oklch(0.30 0.10 240);
+    --method-2: oklch(0.72 0.16 55);
+    --method-2-soft: oklch(0.32 0.10 55);
+    --method-3: oklch(0.72 0.17 145);
+    --method-3-soft: oklch(0.30 0.09 145);
+
+    --grid: oklch(0.28 0.02 250);
+    --waveform: oklch(0.78 0.13 215);
+  }
+
+  * {
+    border-color: var(--border);
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: var(--background);
+    background-image:
+      radial-gradient(circle at 15% 10%, oklch(0.25 0.08 215 / 0.4), transparent 50%),
+      radial-gradient(circle at 85% 90%, oklch(0.22 0.06 280 / 0.35), transparent 55%);
+    background-attachment: fixed;
+    color: var(--foreground);
+    font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+  }
+
+  .font-mono {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+  }
+}
